@@ -95,6 +95,9 @@ desktop.ini
 *.pid
 *.seed
 
+# 物化指标持久化状态（运行期落盘的真实结果）
+backend/data/
+
 # BEGIN S11 LOCAL SNAPSHOT EXCLUSIONS
 **/.git/**
 **/.hg/**

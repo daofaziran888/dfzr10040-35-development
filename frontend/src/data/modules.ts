@@ -190,6 +190,17 @@ export const MODULES: ModuleMeta[] = [
     metrics: ["规则总数", "已物化规则", "需重建数"],
   },
   {
+    key: "metric_detail",
+    name: "物化指标明细",
+    entity: "物化指标明细",
+    desc: "按来源分区计算、按确认轮次发布的持久化物化结果，报表与重算读取同一轮分组值及依据。",
+    fields: ["明细编号", "规则编号", "确认轮次", "分组值", "聚合函数", "指标值", "来源分区", "分区版本", "依据事实数", "发布时间"],
+    statuses: ["计算中", "已确认", "版本冲突", "已放弃"],
+    actions: [],
+    actionTargets: {},
+    metrics: ["明细总数", "已确认明细", "冲突轮次数"],
+  },
+  {
     key: "cross_validate",
     name: "交叉校验",
     entity: "校验方案",

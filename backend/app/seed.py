@@ -616,6 +616,8 @@ SEED_ROWS: dict[str, list[dict[str, Any]]] = {
   '预计算窗口': '指标聚合样例3',
   '存储表名': '指标聚合样例3',
   '最近计算': '指标聚合样例3'}],
+    # 物化指标明细由重算轮次确认发布，启动时为空，真实结果经物化引擎持久化落盘
+    "metric_detail": [],
     "cross_validate": [{'id': 1,
   'status': '待校验',
   'pending': True,

@@ -9,8 +9,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
+from app.metric_store import load_materialized_state
 from app.routers import ROUTERS
 from app.store import store
+
+# 启动时恢复已持久化的物化指标明细，报表可直接读取历史已确认轮次
+load_materialized_state()
 
 app = FastAPI(title="熔炉工坊 · 实时数据融合与宽表构建平台", version="1.0.0")
 

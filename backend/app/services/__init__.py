@@ -19,6 +19,7 @@ from app.services.delta_merge import DeltaMergeService
 from app.services.cold_store import ColdStoreService
 from app.services.export_snapshot import ExportSnapshotService
 from app.services.metric_aggr import MetricAggrService
+from app.services.metric_detail import MetricDetailService
 from app.services.cross_validate import CrossValidateService
 from app.services.data_drift import DataDriftService
 from app.services.fusion_monitor import FusionMonitorService
@@ -43,6 +44,7 @@ SERVICES: dict[str, BaseModuleService] = {
     "cold_store": ColdStoreService(),
     "export_snapshot": ExportSnapshotService(),
     "metric_aggr": MetricAggrService(),
+    "metric_detail": MetricDetailService(),
     "cross_validate": CrossValidateService(),
     "data_drift": DataDriftService(),
     "fusion_monitor": FusionMonitorService(),
